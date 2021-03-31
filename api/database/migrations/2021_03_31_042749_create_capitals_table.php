@@ -15,6 +15,7 @@ class CreateCapitalsTable extends Migration
     {
         Schema::create('capitals', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->timestamps();
         });
     }
