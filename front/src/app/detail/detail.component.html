@@ -1,0 +1,17 @@
+<div class="row" *ngIf="!country">
+  <div class="col-md-12 text-center mt-12">
+    <h3>Carregando...</h3>
+  </div>
+</div>
+<div class="row" *ngIf="country">
+  <div class="offset-md-4 col-md-4 text-center mt-12">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{country.flag.url}}" style="max-height: 150px" alt="Card image cap" >
+      <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">{{country.continent.name}} <small>| continente</small></h6>
+        <h5 class="card-title">{{country.name}}</h5>
+        <p class="card-text">{{country.capital.name}} <small>| capital</small></p>
+      </div>
+    </div>
+  </div>
+</div>

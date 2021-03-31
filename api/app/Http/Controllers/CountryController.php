@@ -9,7 +9,7 @@ class CountryController extends Controller
 {
     public function getCountries(Request $request)
     {
-        $countries = Country::with('continent', 'flag', 'capital')->get();
+        $countries = Country::with('continent', 'flag', 'capital')->orderBy('name')->paginate(15);
         return response()->json($countries);
     }
     public function getCountry($country, Request $request)
