@@ -16,6 +16,7 @@ class CreateContinentsTable extends Migration
         Schema::create('continents', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('initials');
             $table->timestamps();
         });
     }
