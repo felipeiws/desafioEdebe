@@ -1,0 +1,31 @@
+version: "3"
+
+services: 
+  php:
+    build: .
+    container_name: php7-apache2
+    ports:
+      - 81:80
+    volumes: 
+      - ./api:/var/www/html
+    networks:
+      - edebe
+  database:
+      image: mysql:5.7.20
+      restart: always
+      ports:
+        - 33306:3306
+      environment:
+        MYSQL_ROOT_PASSWORD: 1qazxsw2
+        MYSQL_DATABASE: edebe
+        MYSQL_USER: edebe
+        MYSQL_PASSWORD: 1qazxsw2
+      volumes:
+        - "./db:/var/lib/mysql"
+      networks:
+        - edebe
+volumes:
+    data:
+networks:
+  edebe:
+    driver: bridge
