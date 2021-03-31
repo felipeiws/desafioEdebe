@@ -22,3 +22,9 @@ $ cd front
 $ npm install
 $ ng serve
 ```
+
+Feito isso acessar [localhost:4200](http://localhost:4200).
+
+### Funcionamento da aplicação
+
+A página principal irá mostrar uma lista de Países com o nome e bandeira. Clicando em detalhe terá mais imformação do determinado país.
