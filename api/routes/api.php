@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::middleware(['authApi'])->group(function () {
-    Route::get('/countries','CountryController@getCountry')->name('getCountry');
+    Route::get('/countries','CountryController@getCountries')->name('getCountries');
+    Route::get('/countries/{country}','CountryController@getCountry')->name('getCountry');
 });
