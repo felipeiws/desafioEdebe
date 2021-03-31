@@ -10,4 +10,6 @@ class Continent extends Model
         'name',
         'initials',
     ];
+
+    protected $hidden = ["created_at", "updated_at"];
 }

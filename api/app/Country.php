@@ -13,9 +13,17 @@ class Country extends Model
         'capitals_id',
     ];
 
+    protected $hidden = [
+        'continents_id',
+        'flags_id',
+        'capitals_id',
+        'created_at',
+        'updated_at'
+    ];
+
     public function continent()
     {
-        return $this->belongsTo('App\Continents','continents_id');
+        return $this->belongsTo('App\Continent','continents_id');
     }
 
     public function flag()
